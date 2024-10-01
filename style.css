@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #141414;
+  position: relative;
+}
+
+div.degrade {
+  z-index: -1;
+  top: 0;
+  background-image: linear-gradient(to top, #141414, rgba(0, 0, 0, 0.787));
+  width: 100%;
+  height: 45px;
+  position: absolute;
+}
+
+div.conteudo {
+  max-width: 80%;
+  text-align: center;
+}
+
+div.conteudo h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 2.6em;
+  margin-bottom: 0.6em;
+}
+
+div.contas-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 0em 0em 2em 0em;
+}
+
+div.conta {
+  cursor: pointer;
+  max-width: 12%;
+  transition: 0.5s;
+}
+
+div.conta:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+div.conta img {
+  border-radius: 3px;
+  transition: 0.1s;
+  width: 100%;
+}
+
+div.conta img:hover {
+  border: 2px solid white;
+}
+
+div.conta {
+  color: grey;
+  font-weight: 200;
+  font-size: 1.2em;
+  position: relative;
+  overflow: hidden;
+}
+
+div.gerenciar {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0em;
+  display: flex;
+  justify-content: center;
+}
+
+div.gerenciar h3 {
+  color: grey;
+  cursor: pointer;
+  height: 30px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  width: 180px;
+  font-weight: 500;
+  border: 1px solid gray;
+  transition: 0.5s;
+}
+
+div.gerenciar h3:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+@media (max-width: 960px) {
+  div.conteudo h1 {
+    font-size: 2.5em;
+  }
+
+  div.conta {
+    max-width: 100px;
+    position: relative;
+  }
+
+  div.contas-area {
+    flex-wrap: wrap;
+  }
+
+  div.gerenciar h3 {
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+  }
+}
+
+/*PAGINA DE GERENCIAMENTO*/
+
+.hud-gerencia div.conta {
+  opacity: 0.7;
+  transition: none;
+  transform: none;
+}
+
+.hud-gerencia div.conta:hover {
+  transform: scale(1.05);
+}
+
+.hud-gerencia div.conta::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(IMG/lapis.png);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: 3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hud-gerencia div.conta img {
+  border: 2px solid rgba(255, 255, 255, 0.682);
+}
+
+.hud-gerencia .gerenciar h3 {
+  background-color: white;
+  font-weight: bolder;
+  color: red;
+  transition: 0.3s;
+  border: none;
+}
+
+.hud-gerencia .gerenciar h3:hover {
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
